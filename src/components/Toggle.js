@@ -1,10 +1,10 @@
-import React, { useState } from "react"
+import React from "react"
 import {useToggle} from '../hooks/useToggle';
 
 export const Toggle = () => {
   
-  const [isToggled, setToggle] = useState(false);
-  const hello = useToggle();
+  const [isToggled, setToggle] = useToggle(initial);
+  
   return (
     <div>
       <button onClick={() => setToggle((prevState) => !prevState)}>
