@@ -1,6 +1,6 @@
 import React from "react";
 import { Card, CardGrid, Container, Header } from "./Elements";
-import Toggle from './componenets/Toggle';
+import Toggle from './components/Toggle';
 import "./App.css";
 import Menu from "./Menu";
 import blue from "./blue.png";
