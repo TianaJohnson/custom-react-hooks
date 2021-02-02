@@ -1,10 +1,19 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 export const Toggle = () => {
+    const [ isToggled, setToggle]= useState(false);
     return (
         <div>
-            <button>Toggle</button>
+            <button
+            onClick ={()=>
+                setToggle( prevState => {
+                return ! prevState;
+            })
+        }
+            >Toggle</button>
+            {isToggled && 
             <p> To be toggled.</p>
+}
         </div>
     )
 }
