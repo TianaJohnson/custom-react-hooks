@@ -1,11 +1,14 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 export const Inc = () => {
+
+    const [value, setValue] = useState(0);
+
     return (
         <div>
-            <button>-</button>
-            0
-            <button>+</button>
+            <button onClick={ () => setValue(prevState => prevState -1)}>-</button>
+            {value}
+            <button onClick={ () => setValue(prevState => prevState +1)}>+</button>
         </div>
     )
 }
