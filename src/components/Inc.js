@@ -1,14 +1,12 @@
-import React, { useState } from 'react'
+import React from 'react'
 
 export const Inc = () => {
 
-    const [value, setValue] = useState(0);
-
     return (
         <div>
-            <button onClick={ () => setValue(prevState => prevState -1)}>-</button>
+            <button onClick={}>-</button>
             {value}
-            <button onClick={ () => setValue(prevState => prevState +1)}>+</button>
+            <button onClick={}>+</button>
         </div>
     )
 }
