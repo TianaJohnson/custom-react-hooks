@@ -1,14 +1,21 @@
 import { useState } from 'react';
 
-export const useInc = (initial = 0) => {
+export const useInc = ({
+    maxValue = 100000,
+    minValue = -100000,
+    initial = 0
+}) => {
     const [value, setValue] = useState(initial);
 
     const inc = () => {
-       setValue(prevState => prevState +1)
-    }
+       setValue(prevState => (prevState >= maxValue ? maxValue : prevState + 1));
+    };
 
     const dec = () => {
-       setValue(prevState => prevState -1)
-    }
-     return  [ value, {inc, dec} ]
-}
+       setValue(prevState =>(prevState >= minValue ? minValue : prevState - 1));
+    };
+
+    const reset = () => setValue(initial);
+
+     return  [ value, {inc, dec, reset} ]
+};
