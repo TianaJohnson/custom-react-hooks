@@ -4,16 +4,16 @@ export const useInc = ({
     maxValue = 100000,
     minValue = -100000,
     initial = 0,
-    step = 1
+    step = 3
 }) => {
     const [value, setValue] = useState(initial);
 
     const inc = () => {
-       setValue(prevState => (prevState >= maxValue ? maxValue : prevState + step));
+       setValue(prevState => (prevState + step > maxValue ? maxValue : prevState + step));
     };
 
     const dec = () => {
-       setValue(prevState =>(prevState >= minValue ? minValue : prevState - step));
+       setValue(prevState =>(prevState - step < minValue ? minValue : prevState - step));
     };
 
     const reset = () => setValue(initial);
