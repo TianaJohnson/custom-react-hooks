@@ -20,3 +20,5 @@ export const useInc = ({
 
      return  [ value, {inc, dec, reset} ]
 };
+
+//...
