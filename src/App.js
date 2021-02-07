@@ -3,6 +3,8 @@ import { Card, CardGrid, Container, Header } from "./Elements";
 import Toggle from './components/Toggle';
 import Inc from './components/Inc';
 import Mount from './components/Mount';
+import Hover from './components/Hover';
+
 import "./App.css";
 import Menu from "./Menu";
 import blue from "./blue.png";
@@ -25,11 +27,8 @@ function App() {
         <br/>
         <Mount/>
         <br/>
+        <Hover/>
         <CardGrid>
-          <Card style={{ background: "var(--purp)" }}>
-            <h3>Some card</h3>
-            <img src={purp} />
-          </Card>
           <Card style={{ background: "var(--blue)" }}>
             <h3>Some card</h3>
             <img src={blue} />
