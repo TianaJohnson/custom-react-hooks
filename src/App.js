@@ -5,6 +5,7 @@ import Inc from './components/Inc';
 import Mount from './components/Mount';
 import Hover from './components/Hover';
 import PageWrapper from './components/PageWrapper';
+import Nav from './components/Nav';
 import "./App.css";
 import Menu from "./Menu";
 import blue from "./blue.png";
@@ -16,10 +17,11 @@ function App() {
   return (
     <PageWrapper>
     <div>
-      <Header>
+      <Header>       
         <Menu />
         <h1>Header</h1>
       </Header>
+      <Nav/>
       <Container>
         <h2>Super Cool</h2>
         <Toggle/>
