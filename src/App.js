@@ -4,7 +4,7 @@ import Toggle from './components/Toggle';
 import Inc from './components/Inc';
 import Mount from './components/Mount';
 import Hover from './components/Hover';
-
+import PageWrapper from './components/PageWrapper';
 import "./App.css";
 import Menu from "./Menu";
 import blue from "./blue.png";
@@ -14,6 +14,7 @@ import green from "./green.png";
 
 function App() {
   return (
+    <PageWrapper>
     <div>
       <Header>
         <Menu />
@@ -40,6 +41,7 @@ function App() {
         </CardGrid>
       </Container>
     </div>
+    </PageWrapper>
   );
 }
 
