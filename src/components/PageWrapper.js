@@ -10,11 +10,12 @@ const PageWrapper = ({children}) => {
     const { isToggled, toggle } = useToggle();
 
     return(
-        <AppContext.Provider>
+        <AppContext.Provider
             value={{
                 isMenuOpen: isToggled,
                 toggleMenu: toggle
             }}
+            >
             {children}
         </AppContext.Provider>
     );

@@ -12,7 +12,8 @@ const Nav = () => {
             left: 0,
             right: 0
         }} >
-           
+           <h1>Hello</h1>
+           <button>close</button>
         </nav>
     );
 };
