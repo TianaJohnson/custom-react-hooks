@@ -34,10 +34,6 @@ function App() {
             <h3>Some card</h3>
             <img src={blue} />
           </Card>
-          <Card style={{ background: "var(--black)" }}>
-            <h3>Some card</h3>
-            <img src={black} />
-          </Card>
           <Card style={{ background: "var(--green)" }}>
             <h3>Some card</h3>
             <img src={green} />
