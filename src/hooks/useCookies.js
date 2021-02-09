@@ -1,8 +1,13 @@
 import Cookies from 'js-cookie';
+import { useState, useEffect} from 'react';
 
 export const useCookies = ({ key }) => {
-    const getCookie = () => Cookies.get(key);
-    const setCookie = value => Cookies.set(key, value);
+    const initial = Cookies.get(key)
+    const [cookie, setStateCookie ]= useState(initial);
 
-    return [ getCookie,setCookie ];
+    useEffect(() => {
+        Cookies.set(key, cookie)
+    }, [cookie, key])
+
+    return [ cookie,setStateCookie ];
 }
