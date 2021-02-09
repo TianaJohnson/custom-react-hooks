@@ -4,7 +4,7 @@ import Toggle from './components/Toggle';
 import Inc from './components/Inc';
 import Mount from './components/Mount';
 import Hover from './components/Hover';
-import PageWrapper from './components/PageWrapper';
+import PageWrapper from './state';
 import Nav from './components/Nav';
 import "./App.css";
 import Menu from "./Menu";

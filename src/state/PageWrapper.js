@@ -5,7 +5,7 @@ export const AppContext = createContext({
     isMenuOpen: false
 });
 
-const PageWrapper = ({children}) => {
+export const PageWrapper = ({children}) => {
 
     const { isToggled, toggle } = useToggle();
 
@@ -21,4 +21,3 @@ const PageWrapper = ({children}) => {
     );
 };
 
-export default PageWrapper;
