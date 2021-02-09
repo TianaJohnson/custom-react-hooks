@@ -21,5 +21,6 @@ export const PageWrapper = ({children}) => {
     );
 };
 
-export const useAppState = () => useContext(AppContext);
-
+export const useAppState = () => {
+    return useContext(AppContext);
+};
