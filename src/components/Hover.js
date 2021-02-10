@@ -9,7 +9,9 @@ const Hover = () => {
 
     const [isHovered, bind] = useHover();
     const width = useWindowWidth();
-    console.log("width", width)
+    console.log("width", width);
+
+    if (width < 400) return null;
 
     return (
         <div>
