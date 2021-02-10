@@ -17,7 +17,10 @@ const Hover = () => {
 
     return (
         <div>
-            <Card {...bind} style={{ background: isHovered ? "var(--black)" : "var(--purp)"}}>
+            <Card  ref={ref}
+            {...bind} 
+            style={{ background: isHovered ? "var(--black)" : "var(--purp)"}}
+            >
             <h3>Some card</h3>
             <img src={black} alt="..."/>
           </Card>
