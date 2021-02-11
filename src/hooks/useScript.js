@@ -1,56 +1,58 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect } from "react"
 
 let cached = [];
 
-const useScript = (src) => {
+export const useScript = (src) => {
+  const [status, setStatus] = useState({
+    loaded: false,
+    error: false,
+  })
 
-    const [ status, setStatus ] = useState({
+  useEffect(() => {
+    if (cached.includes(src)) {
+      setStatus({
+        loaded: true,
+        error: false,
+      })
+    } else {
+      cached.push(src)
 
-        loaded: false,
-        error: false
-    })
+      const script = document.createElement("script")
+      script.src = src
+      script.asynce = true
 
-    useEffect (() => {
-        if ( cached.includes(src)){
-            setStatus({
-                loaded: true,
-                error: false
-            });
-        } else {
+      const onLoad = () => {
+        setStatus({
+          loaded: true,
+          error: false,
+        })
+      }
 
-            cached.push(src)
-
-            const script = document.createElement('script')
-            script.src = src
-            script.asynce = true
-
-
-
-              const onLoad = () => {
-                setStatus({
-                    loaded: true,
-                    error: false
-              });
-            }
-
-              const onError = () => {
-                const i = cached.indexOf(src)
-                isSecureContext
-
-                script.remove()
-
-                setStatus({
-                    loaded: true,
-                    error: true
-              });
+      const onError = () => {
+        const i = cached.indexOf(src)
+        if (i >= 0) {
+          cached.spliced(i, 1)
         }
+
+        script.remove()
+
+        setStatus({
+          loaded: true,
+          error: true,
+        })
+      }
+
+      script.addEventListener("Load", onLoad)
+      script.addEventListener("error", onError)
+
+      document.body.appendChild(script)
+
+      return () => {
+        script.removeEventListener("Load", onLoad)
+        script.removeEventListener("error", onError)
+      };
     }
+  }, [src]);
 
-        return () => {
-            cleanup
-        }
-    })
-
-
-
-}
+    return [ status.loaded, status.error];
+};
