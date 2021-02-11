@@ -9,15 +9,16 @@ const Hover = () => {
 
     const [isHovered, bind] = useHover();
     const width = useWindowWidth();
-    const [{ref}, bounds] = useMeasure();
-    console.log("bounds", bounds);
+    // const [{ref}, bounds] = useMeasure();
+    // console.log("bounds", bounds);
 
 
     if (width < 400) return null;
 
     return (
         <div>
-            <Card  ref={ref}
+            <Card
+            //   ref={ref}
             {...bind} 
             style={{ background: isHovered ? "var(--black)" : "var(--purp)"}}
             >
