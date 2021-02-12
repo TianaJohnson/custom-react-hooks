@@ -8,3 +8,4 @@ export * from './useToggle';
 export * from './useWindowWidth';
 export * from './useScript';
 export * from './useLocalStorage';
+export * from './useTheme';
