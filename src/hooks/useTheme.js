@@ -3,13 +3,13 @@ import { useLocalStorage } from './useLocalStorage';
 
 export const useTheme = () => {
 
-    const [theme, setTheme] = useLoacalStorage("theme", "light")
+    const [theme, setTheme] = useLocalStorage("theme", "light")
 
     useEffect(() => {
-        document.body.className = " "
+        document.body.className = "";
         document.body.classList.add(theme)
 
     }, [theme]);
 
-    return setTheme; 
+    return [theme, setTheme]; 
 };

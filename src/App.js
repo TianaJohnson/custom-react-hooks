@@ -6,6 +6,7 @@ import Mount from './components/Mount';
 import Hover from './components/Hover';
 import Local from './components/Local';
 import Cookies from './components/Cookie';
+import Theme from './components/Theme';
 import Script from './components/Script';
 import { PageWrapper } from './state';
 import Nav from './components/Nav';
@@ -27,6 +28,7 @@ function App() {
       <Nav/>
       <Container>
         <h2>Super Cool</h2>
+        <Theme/>
         <Script/>
         <Toggle/>
         <br/>
@@ -36,6 +38,7 @@ function App() {
         <br/>
         <Cookies/>
         <Local/>
+        <br/>
         <Hover/>
         <CardGrid>
           <Card style={{ background: "var(--blue)" }}>
