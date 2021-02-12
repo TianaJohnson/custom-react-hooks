@@ -4,6 +4,7 @@ import Toggle from './components/Toggle';
 import Inc from './components/Inc';
 import Mount from './components/Mount';
 import Hover from './components/Hover';
+import Local from './components/Local';
 import Cookies from './components/Cookie';
 import Script from './components/Script';
 import { PageWrapper } from './state';
@@ -34,6 +35,7 @@ function App() {
         <Mount/>
         <br/>
         <Cookies/>
+        <Local/>
         <Hover/>
         <CardGrid>
           <Card style={{ background: "var(--blue)" }}>
