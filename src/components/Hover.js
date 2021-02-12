@@ -3,7 +3,7 @@ import {
         useHover, 
         useWindowWidth,
         // useMeasure
-    } from '../hooks';
+    } from 'hooks';
 import { Card } from '../Elements';
 import black from '../black.png';
 

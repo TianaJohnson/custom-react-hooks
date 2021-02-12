@@ -1,5 +1,5 @@
 import React from 'react'
-import { useScript } from '../hooks';
+import { useScript } from 'hooks';
 
 
 

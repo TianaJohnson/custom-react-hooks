@@ -1,5 +1,5 @@
 import React from 'react';
-import { useScrollFreeze } from '../hooks';
+import { useScrollFreeze } from 'hooks';
 import { useAppState } from '../state';
 
 

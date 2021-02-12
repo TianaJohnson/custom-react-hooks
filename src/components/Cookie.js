@@ -1,5 +1,5 @@
 import React from 'react';
-import { useCookies } from '../hooks';
+import { useCookies } from 'hooks';
 
 const Cookie = () => {
 

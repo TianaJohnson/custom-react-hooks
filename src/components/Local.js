@@ -1,5 +1,5 @@
 import React from 'react';
-import { useLocalStorage } from '../hooks';
+import { useLocalStorage } from 'hooks';
 
 const Local = () => {
 

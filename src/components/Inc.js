@@ -1,5 +1,5 @@
 import React from 'react';
-import { useInc } from '../hooks';
+import { useInc } from 'hooks';
 
 export const Inc = () => {
 
